@@ -9,10 +9,10 @@
 function testHasArrayOfNotes (){
   var list = new noteList();
   if (list.notes.length === 0) {
-    console.log("testHasArrayOfNotes: passed");
+    console.log("PASSED: NOTE LIST: Has array of Notes ");
   }
   else {
-    console.log("testHasArrayOfNotes: failed");
+    console.log("*FAILED: NOTE LIST: Has array of Notes");
   }
 }
 
@@ -20,10 +20,10 @@ function testReturnsArrayofNotes (){
   var list = new noteList();
   list.createNote('text');
   if (list.getAllNotes()[0].text === "text") {
-    console.log("testReturnsArrayofNotes: passed");
+    console.log("PASSED: NOTE LIST: Returns array of notes");
   }
   else {
-    console.log("testReturnsArrayofNotes:failed");
+    console.log("*FAILED: NOTE LIST: Returns array of notes");
   }
 }
 
@@ -31,10 +31,10 @@ function testCreateNote(){
   var list = new noteList();
   list.createNote('text');
   if (list.notes.length === 1) {
-    console.log("testCreateNote: passed");
+    console.log("PASSED: NOTE LIST: Creates Note ");
   }
   else {
-    console.log("testCreateNote: failed");
+    console.log("*FAILED: NOTE LIST: Creates Note");
   }
 }
 
@@ -43,9 +43,9 @@ function testNoteHasUniqueID() {
   list.createNote('Here is my note.');
   list.createNote('This is my note.');
   if (list.notes[1].id === 1) {
-    console.log("note id was created. Passed.");
+    console.log("PASSED: NOTE LIST: creates ID.");
   } else {
-    console.log("note id was not created. Failed.");
+    console.log("*FAILED: NOTE LIST: creates ID.");
   }
 }
 

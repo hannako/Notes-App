@@ -8,7 +8,6 @@
   function noteController(list){
     this.view = new ListView(list);
     List = this.view.listOfNotes;
-    console.log("This is our list1:", List);
   }
   noteController.prototype.addToIndex = function() {
     document.getElementById("app").innerHTML =
@@ -17,15 +16,13 @@
 
   noteController.prototype.loadContent = function(){
     window.addEventListener("hashchange", this.getContent);
-    console.log("This is our list2:", List);
-  }
+  };
 
   noteController.prototype.getContent = function () {
       var id = window.location.hash.split("#")[1];
 
     var singleNoteView = new SingleNoteView(List.notes[id]);
     var singleNoteHTML = singleNoteView.outputHTML();
-    console.log("This is our list3:", List);
     document.getElementById("app2").innerHTML = singleNoteHTML;
 
   };

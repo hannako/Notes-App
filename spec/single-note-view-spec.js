@@ -2,15 +2,15 @@ function testSingleNoteView() {
   var note = new Note("Hello, world!");
   var singleNoteView = new SingleNoteView(note);
   if (singleNoteView.note === note) {
-    console.log("SingleNoteView takes a note model. Passed.");
+    console.log("PASSED : SINGLE NOTE VIEW: Takes a note model.");
   } else {
-    console.log("SingleNoteView takes a note model. Failed.");
+    console.log("*FAILED : SINGLE NOTE VIEW: Takes a note model.");
   }
   var htmlString = singleNoteView.outputHTML();
   if (htmlString === "<div>Hello, world!</div>") {
-    console.log("outputHTML method worked!");
+    console.log("PASSED : SINGLE NOTE VIEW: outputHTML method.");
   } else {
-    console.log("outputHTML method did not work...");
+    console.log("*FAILED : SINGLE NOTE VIEW: outputHTML method.");
   }
 }
 
