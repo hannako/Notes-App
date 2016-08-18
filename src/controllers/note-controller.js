@@ -24,7 +24,6 @@
     var singleNoteView = new SingleNoteView(List.notes[id]);
     var singleNoteHTML = singleNoteView.outputHTML();
     document.getElementById("app2").innerHTML = singleNoteHTML;
-
   };
 
 

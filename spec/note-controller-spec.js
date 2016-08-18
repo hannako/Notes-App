@@ -25,10 +25,10 @@ function testNoteController_2(){
 
   if (document.getElementById("app").innerHTML ===
  '<ul><li><div><a href="#0">testing testing 123</a></div></li></ul>') {
-    console.log("PASSED : NOTE CONTROLLER.addToIndex method");
+    console.log("PASSED: NOTE CONTROLLER.addToIndex method");
   }
   else {
-    console.log("*FAILED : NOTE CONTROLLER.addToIndex method");
+    console.log("*FAILED: NOTE CONTROLLER.addToIndex method");
   }
 }
 
