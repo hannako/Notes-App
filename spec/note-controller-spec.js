@@ -24,7 +24,7 @@ function testNoteController_2(){
   controller.addToIndex();
 
   if (document.getElementById("app").innerHTML ===
- "<ul><li><div>testing testing 123</div></li></ul>") {
+ '<ul><li><div><a href="#0">testing testing 123</a></div></li></ul>') {
     console.log("PASSED : NOTE CONTROLLER.addToIndex method");
   }
   else {
@@ -35,17 +35,19 @@ function testNoteController_2(){
 function testNoteController_3 () {
   var list = new noteList();
   list.createNote("testing testing 123 hello world cool");
+
   var controller = new noteController(list);
+  controller.addToIndex();
+  window.addEventListener("hashchange", checkContent);
 
-  controller.getContent();
-  var displayStr = document.getElementById("app2").innerHTML;
-  console.log("displayStr", displayStr);
-  if (displayStr === '<ul><li><div><a href="#0">testing testing 123 hello world cool</a></div></li></ul>') {
-    console.log("PASSED : NOTE CONTROLLER. loading content method");
-  } else {
-    console.log("*FAILED: NOTE CONTROLLER. loading content method");
-  }
-
+     function checkContent(){
+      var displayStr = document.getElementById("app2").innerHTML;
+        if (displayStr === '<ul><li><div><a href="#0">testing testing 123 hello world cool</a></div></li></ul>') {
+        console.log("PASSED : NOTE CONTROLLER. loading content method");
+      } else {
+        console.log("*FAILED: NOTE CONTROLLER. loading content method");
+      }
+    }
 
 }
 
