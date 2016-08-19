@@ -13,3 +13,6 @@ list.createNote("Saturday: hijack train");
 controller = new noteController(list);
 controller.addToIndex();
 controller.loadContent();
+
+controller.listenForClick();
+// console.log(event_click);

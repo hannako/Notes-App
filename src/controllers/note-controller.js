@@ -26,7 +26,14 @@
     document.getElementById("app2").innerHTML = singleNoteHTML;
   };
 
-
+noteController.prototype.listenForClick = function () {
+  document
+  .getElementById("text")
+  .addEventListener("click", function(clickEvent){
+    clickEvent.preventDefault();
+  });
+  console.log("click!");
+};
 
 exports.noteController = noteController;
 
